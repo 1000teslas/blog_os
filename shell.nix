@@ -3,7 +3,7 @@ let
   nixpkgs-mozilla = import sources.nixpkgs-mozilla;
   pkgs = import <nixpkgs> { overlays = [ nixpkgs-mozilla ]; };
   rust = (pkgs.rustChannelOf {
-    date = "2020-11-28";
+    date = "2020-12-17";
     channel = "nightly";
   }).rust.override { extensions = [ "rust-src" "llvm-tools-preview" ]; };
   bootimage = pkgs.rustPlatform.buildRustPackage rec {
